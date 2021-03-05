@@ -1,0 +1,165 @@
+<!--pages/metrologic/metrologic.wxml-->
+<view class="mainBox">
+    <view style='width:100%;'>
+    <view class="titleBox1">油品信息</view>
+    <view class="table">
+        <view class="tr bg-w">
+            <view class="th">序号</view>
+            <view class="th">油品名</view>
+            <view class="th">油品密度</view>
+            <view class="th">校正系数</view>
+        </view>
+        <block wx:for="{{oildatas}}"  wx:for-item="item" wx:key="index">
+            <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+                <view class="td">{{index+1}}</view>
+                <view class="td">{{item.name}}</view>
+                <view class="td">{{item.density}}</view>
+                <view class="td">{{item.correctionFactor}}</view>
+            </view>
+            <view class="tr" wx:else>
+                <view class="td">{{index+1}}</view>
+                <view class="td">{{item.name}}</view>
+                <view class="td">{{item.density}}</view>
+                <view class="td">{{item.correctionFactor}}</view>
+            </view>
+        </block>
+    </view>
+</view>
+<view style='width:100%;'>
+    <view class="titleBox1">计量系统</view>
+    <view class="ratioData">
+      <view style='text-align:center;color:#03A7F0;font-weight:bold;margin-bottom:5px'>系数</view>
+      <view class="dataNameBox">
+        <view>低流系数</view>
+        <view>高流系数</view>
+        <view>低流量系数</view>
+        <view>高流量系数</view>
+        <view>低流量校正系数</view>
+        <view>高流量校正系数</view>
+      </view>
+      <view class="dataBox">
+        <view>{{coefficientLowFlow||'-------'}}impl/L</view>
+        <view>{{coefficientHighFlow||'-------'}}impl/L</view>
+        <view>{{LowFlowratecoefficient||'-------'}}m3/h</view>
+        <view>{{HighFlowratecoefficient||'-------'}}m3/h</view>
+        <view>{{CorrectionFactorLowFlow||'-------'}}‰</view>
+        <view>{{CorrectionFactorHighFlow||'-------'}}‰</view>
+      </view>
+    </view>
+    <view class="threeBox">
+        <view style='text-align:center;color:#03A7F0;font-weight:bold;margin-bottom:5px'>体积转换</view>
+        <view class="dataNameBox">
+            <view>状态</view>
+            <view>显示体积类型</view>
+            <view>标准温度</view>
+        </view>
+        <view class="dataBox">
+            <view>{{ConversionEnable||'-------'}}</view>
+            <view>{{Conversionmaindisplay||'-------'}}</view>
+            <view>{{RefTemperature||'-------'}}℃</view>
+        </view>
+    </view>
+    <view class="threeBox">
+        <view style='text-align:center;color:#03A7F0;font-weight:bold;margin-bottom:5px'>温度</view>
+        <view class="dataNameBox">
+            <view>温度状态</view>
+            <view>最低温度</view>
+            <view>最高温度</view>
+        </view>
+        <view class="dataBox">
+            <view>{{TemperatureState||'-------'}}</view>
+            <view>{{TemperatureMin||'-------'}}℃</view>
+            <view>{{TemperatureMax||'-------'}}℃</view>
+        </view>
+    </view>
+    <view class="twoBox">
+        <view style='text-align:center;color:#03A7F0;font-weight:bold;margin-bottom:5px'>流速</view>
+        <view class="dataNameBox">
+            <view>最小值</view>
+            <view>最大值</view>
+        </view>
+        <view class="dataBox">
+            <view>{{MinimumFlowrate||'-------'}}m3/h</view>
+            <view>{{MaximumFlowrate||'-------'}}m3/h</view>
+        </view>
+    </view>
+    <view class="oneBox">
+        <view style='text-align:center;color:#03A7F0;font-weight:bold;margin-bottom:5px'>传感器</view>
+        <view style="text-align:center;">{{sensor||'-------'}}</view>
+    </view>
+    <view class="threeBox">
+        <view style='text-align:center;color:#03A7F0;font-weight:bold;margin-bottom:5px'>方向</view>
+        <view class="dataNameBox">
+            <view>状态</view>
+            <view>系数因子</view>
+            <view>展示当前数据</view>
+        </view>
+        <view class="dataBox">
+            <view>{{Directiondetection||'-------'}}</view>
+            <view>{{correctionfactor||'-------'}}‰</view>
+            <view>{{Displayloadingquantity||'-------'}}</view>
+        </view>
+    </view>
+    <view class="threeBox">
+        <view style='text-align:center;color:#03A7F0;font-weight:bold;margin-bottom:5px'>体积</view>
+        <view class="dataNameBox">
+            <view>最小计量体积</view>
+            <view>体积定量</view>
+            <view>精度</view>
+        </view>
+        <view class="dataBox">
+            <view>{{VolumeMin||'-------'}}</view>
+            <view>{{VolumeSettingFixedVolume||'-------'}}‰</view>
+            <view>{{Class||'-------'}}</view>
+        </view>
+    </view>
+</view>
+<view style='width:100%;'>
+    <view class="titleBox1">连接状态</view>
+    <view class="twoBox">
+        <view style='text-align:center;color:#03A7F0;font-weight:bold;margin-bottom:5px'>MPLS</view>
+        <view class="dataNameBox">
+            <view>状态</view>
+            <view>序列号</view>
+        </view>
+        <view class="dataBox">
+            <view>{{MPLSState||'-------'}}</view>
+            <view>{{MPLSSerialnumber||'-------'}}</view>
+        </view>
+    </view>
+    <view class="oneBox">
+        <view style='text-align:center;color:#03A7F0;font-weight:bold;margin-bottom:5px'>PLATE NUMBER</view>
+        <view class="dataNameBox">
+            <view>PLATE NUMBER</view>
+        </view>
+        <view class="dataBox">
+            <view>{{PlateNumber||'-------'}}</view>
+        </view>
+    </view>
+    <view class="oneBox">
+        <view style='text-align:center;color:#03A7F0;font-weight:bold;margin-bottom:5px'>体积设置</view>
+        <view class="dataNameBox">
+            <view>Volume HF to LF</view>
+        </view>
+        <view class="dataBox">
+            <view>{{VolumeHighFlowtoLowFlow||'-------'}}</view>
+        </view>
+    </view>
+    <view class="twoBox speedBox">
+        <view style='text-align:center;color:#03A7F0;font-weight:bold;margin-bottom:5px'>流速设置</view>
+        <view class="dataNameBox">
+            <view>低流速报警</view>
+            <view>Flow LF to HF</view>
+        </view>
+        <view class="dataBox">
+            <view>{{Objectivelowflow||'-------'}}m3/h</view>
+            <view>{{LowflowtoHighflowThreshold||'-------'}}m3/h</view>
+        </view>
+    </view>
+</view>
+<view class="bottomBox">
+        <image src="../../image/map.jpg" alt="" class="map"></image>
+        <text>产品编号：{{versionNo}}</text>
+        <image src="../../image/logo.png" alt="" class="logo"></image>
+    </view>
+</view>

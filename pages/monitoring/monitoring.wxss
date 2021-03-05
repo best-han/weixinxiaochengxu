@@ -1,0 +1,82 @@
+/* pages/tankStorage/tankStorage.wxss */
+.titleBoxDif{
+  background-color: #88D905;
+  margin-top:0px;
+}
+.systemData{
+  background-color: #fff;
+  width:90%;
+  height: 120px;
+  margin: 10px auto;
+  padding:20px 0;
+}
+.electricityData{
+  background-color: #fff;
+  width:90%;
+  height: 30px;
+  margin: 10px auto;
+  padding:20px 0;
+}
+.countData{
+  background-color: #fff;
+  width:90%;
+  height: 205px;
+  margin: 10px auto;
+  padding:15px 0;
+}
+.cumulativeData{
+  background-color: #fff;
+  width:90%;
+  height: 120px;
+  margin: 10px auto;
+  padding:15px 0;
+}
+.blueToothData{
+  background-color: #fff;
+  width:90%;
+  height: 70px;
+  margin: 10px auto;
+  padding:15px 0;
+  margin-bottom: 100px;
+}
+.dataNameBox{
+  width: 42%;
+  float:left;
+  text-align:center;
+  font-size: 14px;
+  line-height: 30px;
+  margin-left: 35px;
+}
+.dataBox{
+  float:left;
+  text-align:left;
+  font-size: 14px;
+  color:#BFBFBF;
+  line-height: 30px;
+}
+
+.bottomBox{
+position:fixed;
+width: 100%;
+bottom:0;
+height:100px;
+background-color: #F2F2F2;
+}
+.bottomBox text{
+  font-size:12px;
+  float:left;
+  margin-left:5%;
+  line-height: 120px;
+}
+.bottomBox .logo{
+  width:90px;
+  height:30px;
+  float:right;
+  margin-right:5%;
+  margin-top:35px
+}
+.map{
+  position:absolute;
+  z-index:-1;
+  width: 100%;
+}

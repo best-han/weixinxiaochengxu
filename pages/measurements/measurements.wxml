@@ -1,0 +1,145 @@
+<!--pages/measurements/measurements.wxml-->
+<view class="mainBox">
+  <view id="measurements" style='width:100%;' wx:if="{{shows}}">
+  <view style="width:90%;height:100px;margin:0 auto">
+    <view class="mainBtn btn1" type="default" bindtap="query">
+      <image class="mainImg" src="../../image/word.png" alt=""></image>
+      <view class="mainText">
+        <text>查询</text>
+      </view>
+    </view>
+    <view class="mainBtn" type="default">
+      <view style="position:absolute;left:30%" bindtap="toPdf"  data-text="word">
+        <image class="mainImg" style="width:12px;height:12px" src="../../image/link.png" alt=""></image>
+        <text style="margin-left:5px">A4</text>
+      </view>
+      <image class="mainImg" src="../../image/excel.png" alt="" bindtap="selectAll" data-text="true"></image>
+      <view class="mainText all" bindtap="selectAll">
+        <text>全选</text>
+      </view>
+    </view>
+    <view class="mainBtn btn3" type="default">
+      <view style="position:absolute;left:20%" bindtap="toPdf"  data-text="excel">
+        <image class="mainImg" style="width:12px;height:12px" src="../../image/link.png" alt=""></image>
+        <text style="margin-left:5px">Ticket</text>
+      </view>
+      <image class="mainImg" src="../../image/pdf.png" alt="" bindtap="selectAll" data-text="false"></image>
+      <view class="mainText cancel" bindtap="cancel">
+        <text>取消</text>
+      </view>
+    </view>
+  </view>
+  <view>
+  </view>
+
+  <view class="table" >
+    <!-- <block wx:for="{{measurementsInfo}}"  wx:for-item="item" wx:key="index">
+        <view class="tr bg-g" >
+            <view class="td">操作序号：{{item.OperationID}}</view>
+            <view class="td">体积：{{item.volume}}</view>
+            <view class="td">油品名称：{{item.oilName}}</view>
+            <view class="td">操作时间：{{item.operateTime}}</view>
+        </view>
+      </block> -->
+      <checkbox-group bindchange="checkboxChange">
+        <view class="weui-cell weui-check__label" wx:for="{{measurementsInfo}}" wx:key="{{item.OperationID}}" bindtap="setMeasurementInfo" data-text="{{index}}">
+          <view class="weui-cell__hd">
+            <checkbox value="{{item.OperationID}}" checked="{{item.checked}}"/>
+          </view>
+          <view class="td firstTd">操作序号：{{item.OperationID}}</view>
+          <!-- <view class="td">体积：{{item.volume}}</view> -->
+          <view class="td">Vt: {{item.Vt}} L</view>
+          <view class="td">V20: {{item.V20}} L</view>
+          <view class="td">油品名称：{{item.oilName}}</view>
+          <view class="td lastTd">操作时间：{{item.operateTime}}</view>
+        </view>
+      </checkbox-group>
+  </view>
+
+  <view style='width:100%;' wx:if="{{showDataDetail}}">
+    <view class="titleBox1">计量信息</view>
+    <view class="countData">
+      <view class="dataNameBox">
+        <view>操作序号</view>
+        <view>日期</view>
+        <view>开始时间</view>
+        <view>结束时间</view>
+        <view>油品序号</view>
+        <view>油品名称</view>
+        <view>密度</view>
+      </view>
+      <view class="dataBox">
+        <view>{{OperationID||'-------'}}</view>
+        <view>{{date||'-------'}}</view>
+        <view>{{startTime||'-------'}}</view>
+        <view>{{endTime||'-------'}}</view>
+        <view>{{oilCode||'-------'}}</view>
+        <view>{{oilName||'-------'}}</view>
+        <view>{{density||'-------'}}kg/m3</view>
+      </view>
+    </view>
+    <view class="titleBox1">MEASURING SYSTEM A</view>
+    <view class="systemData">
+      <view class="dataNameBox">
+        <view>Vt</view>
+        <view>温度</view>
+        <view>V20</view>
+        <view>来源</view>
+        <view>流速</view>
+        <view>质量</view>
+        <view class="tooLong">Signigifiant default</view>
+        <view class="tooLong">No Signigifiant default</view>
+      </view>
+      <view class="dataBox">
+        <view>{{Vt||'-------'}}L</view>
+        <view>{{temp||'-------'}}℃</view>
+        <view>{{V20||'-------'}}L</view>
+        <view>{{direction||'-------'}}</view>
+        <view>{{flowrate||'-------'}}m3/h</view>
+        <view>{{mass||'-------'}}kg</view>
+        <view class="nameTooLong">{{Signigifiantdefault||'-------'}}</view>
+        <view class="nameTooLong">{{NoSignigifiantdefault||'-------'}}</view>
+      </view>
+    </view>
+    <view class="titleBox1">定位</view>
+    <view class="addressData">
+      <view class="dataNameBox">
+        <view>经度</view>
+        <view>纬度</view>
+      </view>
+      <view class="dataBox">
+        <view>{{latitude||'-------'}}</view>
+        <view>{{longitude||'-------'}}</view>
+      </view>
+    </view>
+    <view class="bottomBox">
+      <image src="../../image/map.jpg" alt="" class="map"></image>
+      <text>产品编号：{{versionNo}}</text>
+      <image src="../../image/logo.png" alt="" class="logo"></image>
+    </view>
+  </view>
+
+</view>
+
+  <view id="changedate" class="tui-picker-content" wx:else class="mainBox">
+    <view class="timeBox">
+      <picker mode="date" value="{{date1}}"  bindchange="changeDate1">
+        <button class="btn" type="default">
+          <view class="tui-picker-detail">
+            开始日期: 
+            <text>{{date1||'--'}}</text>
+          </view>
+        </button>
+      </picker>
+      <picker mode="date" value="{{date2}}"  bindchange="changeDate2">
+        <button class="btn" type="default">
+          <view class="tui-picker-detail">
+            结束日期: 
+            <text>{{date2||'--'}}</text>
+          </view>
+        </button>
+      </picker>
+    </view>
+    <button type="default" style="" bindtap="sureToQuery" class="sure">确定</button>
+  </view>
+</view>

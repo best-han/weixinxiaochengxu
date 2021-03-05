@@ -1,0 +1,41 @@
+
+<view class="container">
+  <button  hover-class='button-hover' class='bu'>用户信息</button>
+ <view class="classname">
+
+<form bindsubmit="edituser" formType="submit" >      
+ 
+       <view class="xing">姓名：
+         <input placeholder-class='placeholder'  placeholder='请输入你的昵称'  class="in" name='uname' value="{{userinfo.uname}}" />
+       </view>
+       <view class="xing">地址：
+         <input placeholder-class='placeholder'  placeholder='请输入地址'  class="in" name='address' value="{{userinfo.address}}" />
+       </view>
+       <view class="xing">手机号码：
+         <input placeholder-class='placeholder'  placeholder='请输入手机号码'   type='number' class="in" name='tel' value="{{userinfo.tel}}" />
+       </view>
+       <view class="xing">编码：
+         <input placeholder-class='placeholder'  placeholder='请输入编码'  class="in" name='code' value="{{userinfo.code}}" />
+       </view>
+       <view class="xing">信息：
+         <input placeholder-class='placeholder'  placeholder='请输入信息'  class="in" name='info' value="{{userinfo.info}}" />
+       </view>
+      
+      <view class='xing select_box'>
+      <view class='select' catchtap='selectTap'>
+        <text>打印体积：</text>
+          <text class='select_text'>{{selectData[index]}}</text>
+          <!-- <image class='select_img {{show&&"select_img_rotate"}}' src='/image/gobottom.png'></image>          -->
+      </view>
+      <view class='option_box' style='height:{{show?(selectData.length>5?300:selectData.length*60):0}}rpx;'>
+          <text class='option' style='{{index==selectData.length-1&&"border:0;"}}' wx:for='{{selectData}}' wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item}}</text>
+      </view>
+      </view>
+
+       
+
+<button type="" style="z-index:-1" form-type="submit" hover-class='button-hover' class='su'>保存</button>
+ </form>   
+ </view>
+
+</view> 

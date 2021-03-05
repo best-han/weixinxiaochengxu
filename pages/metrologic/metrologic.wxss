@@ -1,0 +1,105 @@
+/* pages/metrologic/metrologic.wxss */
+.table {
+  border: 1px solid #EBEEF5;
+  width:90%;
+  margin:0 auto;
+  margin-top:10px;
+ }
+ .tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 3rem;
+  align-items: center;
+  background-color: #fff;
+ }
+ .td {
+  width:40%;
+  justify-content: center;
+  text-align: center;
+  color: #909399;
+ }
+ .bg-w{
+  background: rgb(253, 253, 253);
+ }
+ .th {
+  width: 40%;
+  justify-content: center;
+  background: #fff;
+  color: #909399;
+  display: flex;
+  height: 3rem;
+  font-weight: bold;
+  align-items: center;
+ }
+.dataNameBox{
+  width: 42%;
+  float:left;
+  text-align:center;
+  font-size: 14px;
+  line-height: 30px;
+  margin-left: 35px;
+}
+.dataBox{
+  float:left;
+  text-align:left;
+  font-size: 14px;
+  color:#BFBFBF;
+  line-height: 30px;
+}
+.ratioData{
+  background-color: #fff;
+  width:90%;
+  height: 200px;
+  margin: 10px auto;
+  padding:15px 0;
+}
+.threeBox{
+  background-color: #fff;
+  width:90%;
+  height: 115px;
+  margin: 10px auto;
+  padding:15px 0;
+}
+.twoBox{
+  background-color: #fff;
+  width:90%;
+  height: 85px;
+  margin: 10px auto;
+  padding:15px 0;
+}
+.oneBox{
+  background-color: #fff;
+  width:90%;
+  height: 55px;
+  margin: 10px auto;
+  padding:15px 0;
+}
+.bottomBox{
+  position:fixed;
+  width: 100%;
+  bottom:0;
+  height:100px;
+  background-color: #F2F2F2;
+  }
+  .bottomBox text{
+    font-size:12px;
+    float:left;
+    margin-left:5%;
+    line-height: 120px;
+  }
+  .bottomBox .logo{
+    width:90px;
+    height:30px;
+    float:right;
+    margin-right:5%;
+    margin-top:35px
+  }
+  .speedBox{
+    margin-bottom: 110px;
+  }
+  .map{
+    position:absolute;
+    z-index:-1;
+    width: 100%;
+  }

@@ -1,0 +1,63 @@
+/* pages/superivisor/superivisor.wxss */
+page{
+	height: 100%;
+}
+.bluetoothData{
+  background-color: #fff;
+  width:90%;
+  height: 30px;
+  margin: 10px auto;
+  padding:20px 0;
+}
+.countData{
+  background-color: #fff;
+  width:90%;
+  height: 115px;
+  margin: 10px auto;
+  padding:15px 0;
+}
+.dataNameBox{
+  width: 42%;
+  float:left;
+  text-align:center;
+  font-size: 14px;
+  line-height: 30px;
+  margin-left: 35px;
+}
+.dataBox{
+  float:left;
+  text-align:left;
+  font-size: 14px;
+  color:#BFBFBF;
+  line-height: 30px;
+}
+
+.bottomBox{
+  width:90%;
+  }
+  .bottomBox text{
+    font-size:12px;
+    position:absolute;
+    bottom:1.5%;
+    left: 5%;
+  }
+  .bottomBox .logo{
+    width:90px;
+    height:30px;
+    position:absolute;
+    bottom:2%;
+    right: 5%;
+  }
+  .map{
+    position:absolute;
+    width: 250%;
+    height: 100%;
+    z-index: -1;
+    margin-top: -6%;
+  }
+  .bgc{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  }

@@ -1,0 +1,14 @@
+<!--pages/tankStorage/tankStorage.wxml-->
+
+<scroll-view class="data_list" scroll-y scroll-with-animation >
+  <view wx:for="{{tankdatas}}" wx:key="index"
+   data-name="{{item.name}}">
+    <view style="font-size: 16px; color: #333;">{{item.name}}</view>
+  </view>
+</scroll-view>
+
+<view style='width:100%;position:fixed;bottom:10px'>
+    <Button type="warn" style='float:left;width:30%;bottom:0;font-size:12px;left:3.3%' bindtap="nowData">实时罐存</Button>
+    <Button type="warn" style='float:left;width:30%;bottom:0;font-size:12px;left:5%' bindtap="yingkeData">盈科罐存</Button>
+    <Button type="warn" style='float:right;width:30%;bottom:0;font-size:12px;right:3%' bindtap="cleanData">清空</Button>
+</view>

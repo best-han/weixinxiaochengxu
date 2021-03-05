@@ -1,0 +1,34 @@
+<!--pages/manageDebug/manageDebug.wxml-->
+<view class="container">
+  <!-- <button type="default" bindtap="toGetInfo">{{getInfo}}</button>
+  <view style="height: 100rpx;"></view> -->
+  <view class="mainBtn" type="default" bindtap="toMonitoring">
+      <image class="mainImg" src="../../image/monitor.png" alt=""></image>
+      <view class="mainText">
+        <text>{{monitoring}}</text>
+      </view>
+  </view>
+  <view class="mainBtn" type="default" bindtap="toMeasurements">
+      <image class="mainImg" src="../../image/history.png" alt=""></image>
+      <view class="mainText">
+        <text>{{measurements}}</text>
+      </view>
+  </view>
+  <view class="mainBtn" type="default" bindtap="toSuperivisor">
+      <image class="mainImg" src="../../image/admin.png" alt=""></image>
+      <view class="mainText">
+        <text>{{superivisor}}</text>
+      </view>
+  </view>
+  <view class="mainBtn" type="default" bindtap="toMetrologic">
+      <image class="mainImg" src="../../image/param.png" alt=""></image>
+      <view class="mainText">
+        <text>{{metrologic}}</text>
+      </view>
+  </view>
+  <view class="bottomBox">
+      <text>产品编号：{{versionNo}}</text>
+      <image src="../../image/logo.png" alt="" class="logo"></image>
+  </view>
+  <image src="../../image/map1.jpg" alt="" class="map"></image>
+</view>

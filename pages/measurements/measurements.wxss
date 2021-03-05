@@ -1,0 +1,162 @@
+/* pages/measurements/measurements.wxss */
+.mainBtn{
+  width: 32%;
+  height: 100px;
+  margin-top:3%;
+  background-color: #fff;
+  text-align: center;
+  float:left;
+  margin:0 1%;
+  position:relative;
+}
+.btn1{
+  margin-left:0
+}
+.btn3{
+  margin-right:0
+}
+.mainImg{
+  width: 75px;
+  height: 64px;
+  margin-top: 4%
+}
+.mainText{
+  font-family: 微软雅黑;
+  margin: -1% 0 4% 0;
+  color: #90B0C1
+}
+.mainText.all{
+  color: #94BC3D
+}
+.mainText.cancel{
+  color: #EC6B30
+}
+.weui-cell.weui-check__label{
+  height:130px;
+  width:90%;
+  margin:10px auto;
+  margin-bottom:30px;
+}
+.weui-cell__hd{
+  background-color: #fff;
+  float: left;
+  height:130px;
+  line-height:120px;
+  margin:0 30px;
+}
+.weui-cell .td{
+  background-color: #fff;
+  line-height:26px;
+  padding-left:80px
+}
+.firstTd{
+  padding-top: 10px;
+}
+.lastTd{
+  padding-bottom: 10px;
+}
+.countData{
+  background-color: #fff;
+  width:90%;
+  height: 210px;
+  margin: 10px auto;
+  padding:15px 0;
+}
+.addressData{
+  background-color: #fff;
+  width:90%;
+  height: 60px;
+  margin: 10px auto;
+  padding:15px 0;
+  margin-bottom:120px
+}
+.systemData{
+  background-color: #fff;
+  width:90%;
+  height: 240px;
+  margin: 10px auto;
+  padding:15px 0;
+}
+.dataNameBox{
+  width: 42%;
+  float:left;
+  text-align:center;
+  font-size: 14px;
+  line-height: 30px;
+  margin-left: 35px;
+}
+.dataBox{
+  float:left;
+  text-align:left;
+  font-size: 14px;
+  color:#BFBFBF;
+  line-height: 30px;
+}
+.tooLong{
+  white-space:nowrap
+}
+.nameTooLong{
+  margin-left:30px
+}
+.mainBox picker{
+width: 300px;
+margin:0 auto;
+}
+.btn{
+  width: 300px;
+  padding:0;
+  text-align: left;
+}
+.timeBox{
+  height:100px;
+  width: 90%;
+  margin:0 auto;
+  margin-top: 20%;
+  padding: 20px 0;
+  background-color: #fff;
+}
+.tui-picker-detail{
+  background-color: #fff;
+  padding-left: 60px;
+}
+.btn::after{
+  border: none;
+}
+.sure{
+  width: 90%;
+  background-color: #03A7F0 !important;
+  margin-top:10px;
+  color:#fff !important;
+}
+.tui-picker-detail text{
+  margin-left: 5px;
+  color:#BFBFBF
+}
+.bottomBox{
+  position:fixed;
+  width: 100%;
+  bottom:0;
+  height:100px;
+  background-color: #F2F2F2;
+  }
+  .bottomBox text{
+    font-size:12px;
+    float:left;
+    margin-left:5%;
+    line-height: 120px;
+  }
+  .bottomBox .logo{
+    width:90px;
+    height:30px;
+    float:right;
+    margin-right:5%;
+    margin-top:35px
+  }
+  .map{
+    position: absolute;
+    z-index: -1;
+    width:100%
+  }
+  .speedBox{
+    margin-bottom: 110px;
+  }

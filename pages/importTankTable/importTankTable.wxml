@@ -1,0 +1,13 @@
+<!--pages/importTankTable/importTankTable.wxml-->
+<Button type="warn" style="width:400rpx" bindtap="chooseFile">选择容积表文件</Button>
+
+<scroll-view class="file_list" scroll-y scroll-with-animation>
+  <view wx:for="{{files}}" wx:key="index"
+   data-file-path="{{item.path}}"
+   data-name="{{item.name}}">
+    <view style="font-size: 16px; color: #333;">{{item.name}}</view>
+  </view>
+</scroll-view>
+
+<Button type="warn" style='position:fixed;width:100%;bottom:20' bindtap="receiveMessage">读取</Button>
+<Button type="warn" style='position:fixed;width:100%;bottom:0' bindtap="importTankTableFiles">导入</Button>

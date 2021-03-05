@@ -1,0 +1,78 @@
+<!--pages/tankStorage/tankStorage.wxml-->
+<view class="mainBox">
+    <view style='width:100%;'>
+        <view class="titleBox1">系统信息</view>
+        <view class="systemData">
+            <view class="dataNameBox">
+                <view>日期</view>
+                <view>时间</view>
+                <view>模式</view>
+                <view>报警状态</view>
+            </view>
+            <view class="dataBox">
+                <view>{{day||'-------'}}</view>
+                <view>{{hour||'-------'}}</view>
+                <view>{{mode||'-------'}}</view>
+                <view>{{alarm||'-------'}}</view>
+            </view>
+        </view>
+        <view class="electricityData">
+            <view class="dataNameBox">
+                <view>电量</view>
+            </view>
+            <view class="dataBox">
+                <view>{{batteriesLevel||'-------'}}　%</view>
+            </view>
+        </view>
+    </view>
+    <view style='width:100%;'>
+        <view class="titleBox1 titleBoxDif">计量信息</view>
+        <view class="countData">
+            <view style='text-align:center;color:#88D905;font-weight:bold;margin-bottom:5px'>MEASURING SYSTEM A</view>
+            <view class="dataNameBox">
+                <view>状态</view>
+                <view>V20</view>
+                <view>Vt</view>
+                <view>质量</view>
+                <view>流速</view>
+                <view>温度</view>
+            </view>
+            <view class="dataBox">
+                <view>{{inMeasuring||'-------'}}</view>
+                <view>{{V20||'-------'}}</view>
+                <view>{{Vt||'-------'}}</view>
+                <view>{{weight||'-------'}}</view>
+                <view>{{flowrate||'-------'}}</view>
+                <view>{{temperature||'-------'}}</view>
+            </view>
+        </view>
+        <view class="cumulativeData">
+            <view style='text-align:center;color:#88D905;font-weight:bold;margin-bottom:5px'>累计量</view>
+            <view class="dataNameBox">
+                <view>V20</view>
+                <view>Vt</view>
+                <view>质量</view>
+            </view>
+            <view class="dataBox">
+                <view>{{Vm||'-------'}}L</view>
+                <view>{{Vb||'-------'}}L</view>
+                <view>{{weightTOTALIZER||'-------'}}kg</view>
+            </view>
+        </view>
+        <view class="titleBox1">连接状态</view>
+        <view class="blueToothData">
+            <view style='text-align:center;color:#03A7F0;font-weight:bold;margin-bottom:5px'>蓝牙</view>
+            <view class="dataNameBox">
+                <view>状态</view>
+            </view>
+            <view class="dataBox">
+                <view>{{connected || '-------'}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="bottomBox">
+        <image src="../../image/map.jpg" alt="" class="map"></image>
+        <text>产品编号：{{versionNo}}</text>
+        <image src="../../image/logo.png" alt="" class="logo"></image>
+    </view>
+</view>

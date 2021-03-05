@@ -1,0 +1,36 @@
+<!--pages/superivisor/superivisor.wxml-->
+<view class="bgc">
+  <view style='width:100%;'>
+    <view class="titleBox1">蓝牙</view>
+    <view class="bluetoothData">
+      <view class="dataNameBox">
+        <view>名称</view>
+      </view>
+      <view class="dataBox">
+        <view>{{bluetoothName||'-------'}}</view>
+      </view>
+    </view>
+  </view>
+  <view style='width:100%;'>
+    <view class="titleBox1">较准/计量</view>
+    <view class="countData">
+      <view style='text-align:center;color:#03A7F0;font-weight:bold;margin-bottom:5px'>上次计量</view>
+      <view class="dataNameBox">
+        <view>体积</view>
+        <view>平均流速</view>
+        <view>平均温度</view>
+      </view>
+      <view class="dataBox">
+        <view>{{Vt||'-------'}}</view>
+        <view>{{averageFlowrate||'-------'}}</view>
+        <view>{{averageTemperature||'-------'}}℃</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="bottomBox">
+      <text>产品编号：{{versionNo}}</text>
+      <image src="../../image/logo.png" alt="" class="logo"></image>
+    </view>
+    <image src="../../image/map1.jpg" alt="" class="map"></image>
+</view>
