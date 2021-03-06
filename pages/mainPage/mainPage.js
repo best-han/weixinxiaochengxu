@@ -20,40 +20,46 @@ Page({
 
   toBluetooth:function(){
     console.info("跳转到连接蓝牙设备");
-    wx.navigateTo({
+    wx.redirectTo({
       url: '../bluetooth/bluetooth',
     })
+    
   },
   toGetInfo:function(){
     console.info("跳转到获取信息页面");
-    wx.navigateTo({
+    wx.redirectTo({
       url: '../getInfo/getInfo',
     })
+    
   },
 
   toMonitoring:function(){
     console.info("跳转到监控页面");
-    wx.navigateTo({
+    wx.redirectTo({
       url: '../monitoring/monitoring',
     })
+    
   },
   toMeasurements:function(){
     console.info("跳转到历史记录页面");
-    wx.navigateTo({
+    wx.redirectTo({
       url: '../measurements/measurements',
     })
+    
   },
   toSuperivisor:function(){
     console.info("跳转到管理员模式页面");
-    wx.navigateTo({
+    wx.redirectTo({
       url: '../superivisor/superivisor',
     })
+    
   },
   toMetrologic:function(){
     console.info("跳转到设备参数页面");
-    wx.navigateTo({
+    wx.redirectTo({
       url: '../metrologic/metrologic',
     })
+   
   },
   //首先发送指令获取产品编号
   //获取蓝牙信息26401  
@@ -209,7 +215,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log('---------------怎么肥四');
+
     this.getBluetoothInfo();
   },
 
@@ -217,6 +223,9 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
+   util.onBLEConnectionState();
+  
+   // }
     // if(!app.globalData.checkOpenIdValidation){
     //   wx.showModal({
     //     title: '当前用户无权限',

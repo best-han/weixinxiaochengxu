@@ -471,21 +471,7 @@ Page({
    */
   onReady: function () {
     this.getOilInfo();
-    // if(util.checkOpenIdValidation()){
-      // let state=util.onBLEConnectionState();
-      // if(!state){
-      //   console.info('跳转蓝牙链接页面')
-      //   wx.showModal({
-      //     title: '当前蓝牙未连接,跳转蓝牙设备选择配对页面',
-      //     showCancel: false,
-      //     success (res) {
-      //       wx.navigateTo({
-      //         url: '../bluetooth/bluetooth',
-      //       })
-      //     }
-      //   })
-      // }  
-    // }
+    
   },
 
   /**

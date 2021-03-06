@@ -31,9 +31,10 @@ Page({
   //跳转用户信息页面
   toUserinfo(){
     console.info("跳转到用户信息页面");
-    wx.navigateTo({
+    wx.redirectTo({
       url: '../userInfo/userInfo',
     })
+    
   },
   //搜索蓝牙
   openBluetoothAdapter() {
@@ -170,9 +171,10 @@ Page({
   goBackPage(){
     console.log('获取蓝牙设备属性后点击返回上级页面');
    // wx.navigateBack()
-    wx.navigateTo({
-      url: '../mainPage/mainPage',
-    });
+   wx.redirectTo({
+     url: '../mainPage/mainPage',
+   })
+    
   },
   getBLEDeviceCharacteristics(deviceId, serviceId) {
     wx.getBLEDeviceCharacteristics({

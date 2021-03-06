@@ -71,9 +71,12 @@ function onBLEConnectionState(){
           title: '当前蓝牙未连接,跳转蓝牙设备选择配对页面',
           showCancel: false,
           success (res) {
-            wx.navigateTo({
+            wx.redirectTo({
               url: '/pages/bluetooth/bluetooth',
             })
+            // wx.navigateTo({
+            //   url: '/pages/bluetooth/bluetooth',
+            // })
           }
         })
       }  
